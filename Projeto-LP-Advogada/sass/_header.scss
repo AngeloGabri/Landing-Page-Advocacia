@@ -1,0 +1,224 @@
+header{
+    width: 100%;
+    background-color: $grey-100;
+    transition: all .3s;
+    z-index: 2022;
+
+    &.fixed-menu{
+        position: fixed;
+        background-color: $bege-100;
+        box-shadow: 0 0 3rem 0 rgba(0,0,0,0.3);
+        
+        .container{
+            .right-content{
+                nav{
+                    ul{
+                        li{    
+                            a{
+                               
+                                color: $grey-100;
+                                font-size: 2rem;
+                                transition: color .3s;
+    
+                                &:hover{
+                                    color: $white;
+                                }
+                            }
+                        }     
+                    }
+                }
+            }
+            
+            .left-content{
+                h2{
+                    color: $grey-100;
+                }
+            }
+        }
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6rem;
+        
+
+        .right-content{
+            nav{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    li{
+                        
+                        &:not(:first-child){
+                            margin-left: 4.8rem;
+                        }
+    
+                        a{
+                            width: 100%;
+                            color: $white;
+                            font-size: 2rem;
+                            transition: color .3s;
+
+                            &:hover{
+                                color: $bege-100;
+                            }
+                        }
+                    }     
+                }
+            }
+        }
+
+        .left-content{
+            display: inline-block;
+
+            
+            
+            h2{
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: $white;
+            }
+        }
+    }
+
+
+
+        
+    @media(max-width:850px){
+      
+            .container{
+        
+                .right-content{
+                    nav{
+                     display: none;
+                    }        
+                }
+            }
+        
+            
+        
+            .btn-mobile{
+                display: block;
+            }
+    }
+  
+}
+
+@media(max-width:990px){ 
+    header{
+        .container{
+            .right-content{
+                nav{
+                    ul{
+                        li{
+                            a{
+                                font-size: 1.6rem;                           
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .left-content{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+        }
+    
+        &.fixed-menu{
+            .container{           
+                .right-content{
+                    nav{
+                        ul{
+                            li{
+                                a{
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+       
+        
+    
+}
+
+
+    
+
+.menu-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2022;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    aside{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 75%;
+        height: 100%;
+        background-color: $grey-50;
+        padding: 3rem;
+        transform: translateX(-100%);
+        transition: transform .3s;
+
+        h2{
+            font-size: 2.4rem;
+            color: $grey-100;
+        }
+
+        ul{
+            li{
+                a{
+                    padding: 1.5rem 0;
+                    display: block;
+                    font-size: 2rem;
+                    color: #5f5c6b;
+                }
+            }
+        }
+    }
+}
+
+.btn-mobile{
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-opened{
+    .menu-mobile{
+        opacity: 1;
+        pointer-events: all;
+
+        aside{
+            transform: translateX(0);
+        }
+    }
+}
+
+
+

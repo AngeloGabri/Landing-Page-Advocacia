@@ -1,0 +1,60 @@
+footer{
+    background-color: $grey-100;
+
+    .container{ 
+        .start{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            .logo{  
+                margin-right: 3rem;      
+                img{
+                    height: 19.5rem;
+                    width: 100%;
+                    max-width: 37.7rem;
+                    
+                }
+                
+            }
+            .social-midia{ 
+                h3{
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: $white;
+                }
+
+                nav{
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        
+                        li{
+                            &:not(:first-child){
+                                margin-left: 2rem;
+                            }                  
+                        }
+                    }
+                }
+            }
+        }
+
+      
+    }
+
+    .baseboard{
+        background-color: $bege-200;
+        text-align: center;
+    }
+
+    @media (max-width:890px) {
+        .baseboard{
+            .container{
+                span{
+                    font-size:1.4rem;
+                }
+            }
+        }
+        
+    }
+}
